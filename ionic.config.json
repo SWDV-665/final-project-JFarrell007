@@ -1,0 +1,7 @@
+{
+  "name": "camera-tabs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
