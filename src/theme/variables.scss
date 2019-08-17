@@ -4,6 +4,9 @@
 /** Ionic CSS Variables **/
 :root {
   --ion-background-color: #383a3e;
+   /* Set the font family of the entire app */
+   --ion-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+   --ion-text-color: #4e87f0;
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;

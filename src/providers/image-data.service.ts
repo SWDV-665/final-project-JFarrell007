@@ -4,33 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ImageDataService {
-  items = [];
   photos = [];
-  url = 'http://192.168.1.45:5000/predictbase64'
   image: string;
 
   constructor() { }
-
-  getItems(){
-    return this.items;
-  }
-
-  setItems(data){
-    this.items = data;
-  }
-
-  getImage(){
-    return this.image;
-  }
-  
-  setImage(data){
-    this.image = data;
-  }
-
-  async addPhoto(pic){
+  /*
+  addPhoto is called from tab2.page.html to add a new photo to the array.
+  */
+  async addPhoto(pic) {
     const res = await this.photos.push(pic);
   }
-  getPhotos(){
+  /*
+  getPhotos() is called from tab3.page.html to retreive the photos.
+  */
+  getPhotos() {
     return this.photos;
   }
 }

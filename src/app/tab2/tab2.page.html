@@ -1,48 +1,15 @@
-<!--<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      What is it?
-    </ion-title>
-  </ion-toolbar>
-</ion-header>-->
-
 <ion-content>
   <ion-card>
     <ion-card-content  >
-      <!--<p>Hello World, this is my camera app</p>
-      <ion-button (click)="imageCapture.takePhoto()">Take a Picture</ion-button>-->
-      <!--Latest Picture:-->
-      <!--<img [src]="image" *ngIf="image"/>-->
       <ion-img [src]="imageCapture.image" *ngIf="imageCapture.image" ></ion-img>
-      <!--<ion-img id ="myImage" [src]="imageCapture.image" *ngIf="imageCapture.image" (ionChange)="imageCapture.onFileCange($event)" #myImage ></ion-img>-->
-      <!--<ion-img [src]="imageCapture.base64ImageData" *ngIf="imageCapture.base64ImageData"></ion-img>-->
-      <!--<img [src]="image" *ngIf="getPhoto()"/> -->
     </ion-card-content>
   </ion-card>
-  <ion-card *ngFor="let item of imageCapture.loadItems(); let i = index"> 
-    <ion-card-content>
-      <p>{{item.label}}</p>
-      <p>{{item.probability}}</p>
-    </ion-card-content>
-  </ion-card>
-    <ion-fab vertical = "bottom" horizontal="center" slot="fixed">
-    <ion-fab-button mini (click)="imageCapture.takePhoto()"><ion-icon name="radio-button-on"></ion-icon></ion-fab-button>
+    <ion-fab vertical = "bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" mini (click)="imageCapture.takePhoto()"><ion-icon name="add"></ion-icon></ion-fab-button>
   </ion-fab>
-  <!--<ion-footer>
-    <ion-toolbar>
-      <ion-button slot="start" (click)="takePhoto()">Take a Picture</ion-button>
-      <ion-button (click)="analyzePhoto()">Analyze</ion-button>
-    </ion-toolbar>
-  </ion-footer> -->
     <ul class="output">
     <li *ngFor="let prediction of imageCapture.predictions | async">
       {{prediction.className}} ({{prediction.probability | number:'1.5-5'}})
     </li>
   </ul> 
-    <!--<ion-footer>
-    <ion-toolbar>
-      <ion-button slot="start" (click)="takePhoto()">Take a Picture</ion-button>
-      <ion-button (click)="analyzePhoto()">Analyze</ion-button>
-    </ion-toolbar>
-  </ion-footer>-->
 </ion-content>
