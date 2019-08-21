@@ -2,7 +2,6 @@ import { Injectable} from '@angular/core';
 import { Camera, CameraOptions, CameraPopoverOptions } from '@ionic-native/camera/ngx';
 import { ImageDataService } from '../providers/image-data.service';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-// import { model } from '@tensorflow/tfjs';
 import { LoadingController } from '@ionic/angular';
 
 
